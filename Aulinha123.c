@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+// INTEGRANTES DO GRUPO
+//R956IH4 - JOAO BATISTA SUZANA FILHO
+//R879941 - LUCAS MARÇAL DE OLIVEIRA
+ 
+int main(void){
+	float SNovo,SBruto;
+	int Dep;
+	char Nome[10];
+
+//----------------------------
+
+	printf("Digite o seu nome: ");
+	scanf("%s",&Nome);
+	printf("Digite o seu salario: ");
+	scanf("%f",&SBruto);
+	printf("Digite a quantidade de dependentes: ");
+	scanf("%d",&Dep);
+	switch(Dep){
+		case 0:
+			SNovo = SBruto + (SBruto * 5/100);
+		break;
+		case 1:
+		case 2:
+		case 3:
+			SNovo = SBruto + (SBruto * 10/100);
+		break;
+		case 4:
+		case 5:
+		case 6:
+			SNovo = SBruto + (SBruto * 15/100);
+		break;
+		default:
+			SNovo = SBruto + (SBruto * 18/100);
+		break;
+	}
+	printf("O novo salario de %s, sera de R$ %6.2f \n",Nome, SNovo);
+	system("pause");
+}
