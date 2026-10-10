@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    float comprimento = 0;
+    float largura = 0;
+    float area = 0;
+
+    printf("Calculadora de terreno");
+    printf("Digite o comprimento do terrreno (em metros): ");
+    scanf("%f", &comprimento);
+    printf("Digite a largura do terreno (em metros): ");
+    scanf("%f", &largura);
+    area = (comprimento * largura);
+    printf("A area do terreno e %f \n", &area);
+    if(area<100)
+    {
+        printf("E a classificacao do terreno e, TERRENO POPULAR");
+    }
+    if(area>100 || area<500)
+    {
+        printf("E a classificacao do terreno e, TERRENO MASTER");
+    }
+    if(area<500)
+    {
+        printf("E a classificacao do terreno e, TERRENO VIP");
+    }
+    system("pause");
+    return 0;
+}
