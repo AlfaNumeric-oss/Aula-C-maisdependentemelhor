@@ -1,0 +1,40 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+    float Sbruto, Snovo;
+    int dep;
+    char nome[50];
+
+    printf("Digite o seu nome: ");
+    scanf("%s", &nome);
+
+    printf("Digite o seu salario: R$");
+    scanf("%f", &Sbruto);
+
+    printf("Digite a quantidade de dependentes: ");
+    scanf("%d", &dep);
+
+    switch(dep) {
+        case 0:
+            Snovo = Sbruto + (Sbruto * 5 / 100);
+
+        case 1:
+        case 2:
+        case 3:
+            Snovo = Sbruto + (Sbruto * 10 / 100);
+
+        case 4:
+        case 5:
+        case 6:
+            Snovo = Sbruto + (Sbruto * 15 / 100);
+
+        default:
+            Snovo = Sbruto + (Sbruto * 18 / 100);
+    }
+
+    printf("O novo salario de %s sera de R$ %.2f", nome, Snovo);
+
+    return 0;
+}
