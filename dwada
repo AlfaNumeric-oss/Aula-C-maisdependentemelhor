@@ -13,19 +13,20 @@ int main()
     printf("Digite a largura do terreno (em metros): ");
     scanf("%f", &largura);
     area = (comprimento * largura);
-    printf("A area do terreno e %f \n", &area);
+    printf("A area do terreno e %f \n", area);
     if(area<100)
     {
         printf("E a classificacao do terreno e, TERRENO POPULAR");
     }
-    if(area>100 || area<500)
+    else if (area>100 || area<500)
     {
         printf("E a classificacao do terreno e, TERRENO MASTER");
     }
-    if(area<500)
+    else if(area<500)
     {
         printf("E a classificacao do terreno e, TERRENO VIP");
     }
+    printf("\n");
     system("pause");
     return 0;
 }
